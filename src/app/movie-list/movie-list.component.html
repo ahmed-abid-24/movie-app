@@ -1,0 +1,14 @@
+<app-search-bar (search)="onSearch($event)"></app-search-bar>
+
+<div class="grid" *ngIf="movies$ | async as movies; else loading">
+  <a class="card" *ngFor="let m of movies" [routerLink]="['/movie', m.id]">
+    <img
+      [src]="m.poster_path ? imgUrl + m.poster_path : 'https://placehold.co/300x450?text=No+poster'"
+      [alt]="m.title">
+    <p>{{ m.title }}</p>
+  </a>
+</div>
+
+<ng-template #loading>
+  <p class="msg">Chargement...</p>
+</ng-template>

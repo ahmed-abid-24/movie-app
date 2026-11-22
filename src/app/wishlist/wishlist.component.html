@@ -1,0 +1,19 @@
+<h2 class="title">Ma Wish list</h2>
+
+<p class="msg" *ngIf="store.getAll().length === 0; else list">
+  Aucun film dans la wish list. Ouvrez un film et cliquez sur le cœur.
+</p>
+
+<ng-template #list>
+  <div class="grid">
+    <div class="item" *ngFor="let m of store.getAll()">
+      <a class="card" [routerLink]="['/movie', m.id]">
+        <img
+          [src]="m.poster_path ? imgUrl + m.poster_path : 'https://placehold.co/300x450?text=No+poster'"
+          [alt]="m.title">
+        <p>{{ m.title }}</p>
+      </a>
+      <button (click)="store.toggle(m)">Retirer</button>
+    </div>
+  </div>
+</ng-template>

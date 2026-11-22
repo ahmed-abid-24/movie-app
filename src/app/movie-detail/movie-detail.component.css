@@ -1,0 +1,7 @@
+.detail { display: flex; gap: 20px; padding: 20px; }
+.poster { position: relative; width: 260px; flex-shrink: 0; }
+.poster img { width: 100%; }
+.heart { position: absolute; top: 6px; right: 6px; color: #fff; cursor: pointer; font-size: 20px; }
+.heart.active { color: red; }
+.info b { color: #ffd60a; margin-right: 8px; }
+h2 { font-family: Georgia, serif; }

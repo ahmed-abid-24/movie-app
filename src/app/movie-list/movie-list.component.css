@@ -1,0 +1,18 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: 0 20px 20px;
+}
+.card { text-decoration: none; color: #000; }
+.card img { width: 100%; display: block; }
+.card p {
+  background: #ffd60a;
+  margin: 0;
+  padding: 6px;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  min-height: 30px;
+}
+.msg { text-align: center; padding: 20px; }
